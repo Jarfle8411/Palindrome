@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace PalindromeChallenge
+{
+    class Program
+    {
+        /*ask user to enter a word
+         * see if it's the same word in reverse
+         */
+
+        static void Main(string[] args)
+        {
+            // String and int Datatypes with a variables names Palindrome
+            string Palindrome ;
+
+            // Asking user to input a whole number
+            // & reading the number from the console.
+            Console.WriteLine("Enter a value.");
+            string Num = Console.ReadLine();;
+        
+            // Appending the to char array method to string Num
+            // and Assigning the user input to a char Array
+                char[] t = Num.ToCharArray();
+
+            // The assigned Array reads the user input and reverses
+            // the input of variable t array
+                Array.Reverse(t);
+
+            // Creating a new instance of string t and naming it string b
+                string b = new string(t);
+
+            // Creating a if statement that see if Num which is the user input
+            // is equal to the reversed array which is now string t,  and outputting
+            // if it is a palindrome number or not a palindrome.
+                if (Num.Equals(b))
+                {
+                    Console.WriteLine("Palindrome number");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("Not a Palindrome.");
+                }
+            
+
+            //Asking user enter some text
+            Console.WriteLine("Please enter a word to see if it is a palindrome word or not.");
+            
+            // Console readline method allows the user to input text into the console.
+            Palindrome = Console.ReadLine();
+
+            // Copies string Palindrome to a Char Unicode Array variable named w
+            char[] w = Palindrome.ToCharArray();
+           
+            // Reverse method reverses the string value that the user entered
+            // into the console, and appends the values to array
+            Array.Reverse(w);
+          
+
+            // Creates a new string word and gives the string the 
+            // attributes from char array w
+            string word = new string(w);
+
+            // If statement that compares and has appended the To lower method to Palindrome and word
+            // therefore to ensure that the words will match in reverse
+            // If statement outputs that it is a match
+            // Else statement outputs that there isn't a match.
+            if (Palindrome.ToLower().Equals(word.ToLower()))
+            {
+                Console.WriteLine("Congratulations, it is a palindrome!");
+            }
+            else
+            {
+                Console.WriteLine("It isn't a palindrome string.");
+            }
+
+       
+
+        }
+    }
+}
